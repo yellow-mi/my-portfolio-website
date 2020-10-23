@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.7s ease-out; }
+  transition: all 0.6s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.965;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,33 +40,34 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #3a99d8;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #47a0db;
     transform: translate3d(0, 100%, 0);
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
       background: url("../img/portrait_big.jpg");
-      background-position: center;
       background-size: cover;
+      opacity: 1.0;
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 4px #F8D210;
+      z-index: 5; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #F8D210; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -74,11 +75,11 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: whitesmoke;
     text-decoration: none;
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #F8D210; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.18s; }
@@ -92,12 +93,44 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.72s; }
 
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_smartphone.jpg");
+      background-size: cover;
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #47a0db;
+  color: whitesmoke;
   height: 100%;
   margin: 0;
   font-family: 'blippo','monospace', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -113,7 +146,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(68, 68, 68, 0.85);
+      background: rgba(71, 160, 219, 0.85);
       z-index: -1; }
 
 h1,
@@ -130,10 +163,10 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(80, 164, 221, 0.5); }
 
 a {
-  color: white;
+  color: whitesmoke;
   text-decoration: none; }
 
 header {
@@ -142,7 +175,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #F8D210; }
 
 main {
   padding: 4rem;
@@ -152,8 +185,8 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.7s ease-out; }
+        color: #F8D210;
+        transition: all 0.6s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {

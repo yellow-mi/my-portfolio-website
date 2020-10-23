@@ -43,7 +43,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.965;
     visibility: hidden;
 
     &.show {
@@ -65,7 +65,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: darken($primary-color, 3);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include easeOut;
@@ -81,26 +81,29 @@
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
         @include easeOut;
-    
+        
     &.show {
         // Slide in from the bottom
         transform: translate3d(0, 0, 0);
+        
     }
 
     .portrait {
         width: 250px;
         height: 250px;
         background: url('../img/portrait_big.jpg');
-        background-position: center;
         background-size: cover;
+        opacity: 1.0;
         border-radius: 50%;
-        border: solid 3px $secondary-color;
+        border: solid 4px $secondary-color;
+        z-index: 5;
     }
   }
 
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include easeOut;
+    
 
     &.show {
         // Slide in from the right
@@ -119,7 +122,7 @@
      text-transform: uppercase;
      padding: 1rem 0;
      font-weight: 300;
-     color: #fff;
+     color: whitesmoke;
      text-decoration: none;
      @include easeOut;
 
