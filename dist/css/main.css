@@ -149,8 +149,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #4da9af;
-  text-transform: capitalize; }
+  color: #4da9af; }
 
 main {
   padding: 4rem;
@@ -203,6 +202,25 @@ main {
       opacity: 0.5;
       border-color: white;
       transition: all 0.6s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1rem;
+    border: 3px #4da9af solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.6s ease-out; }
+    .boxes div:hover {
+      padding: 1.5rem 2.5rem;
+      background: #4da9af;
+      color: #30373d; }
+      .boxes div:hover span {
+        color: #30373d; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
