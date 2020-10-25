@@ -11,7 +11,7 @@
     color: whitesmoke; 
     height: 100%;
     margin: 0;
-    font-family: 'blippo','monospace', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $text-font;
     line-height: 1.5
    }
 
@@ -23,7 +23,8 @@
      font-weight: 400;
 
      &.lg-heading {
-      font-size: 5rem;
+      font-size: 3.8rem;
+      font-family: $font-title2;
       
      }
 
@@ -47,6 +48,7 @@
 
    .text-secondary {
     color: $secondary-color;
+    text-transform: capitalize; ;
    }
 
    main {
@@ -112,6 +114,51 @@
       padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
     }
+   }
+
+   // Work/Projects
+   .projects {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 0.7rem;
+     
+     img {
+       width: 100%;
+       border: 3px $secondary-color solid;
+       border-radius: 18px;
+
+       &:hover {
+         opacity: 0.5;
+         border-color: white;
+         @include easeOut;
+       }
+     }
+   }
+
+   // Button Styles
+   .btn {
+     display: block;
+     padding: 0.5rem 1rem;
+     border: 0;
+     border-radius: 3px;
+     margin-bottom: 0.3rem;
+     &:hover {
+       background: $secondary-color;
+       color: $primary-color;
+     }
+   }
+
+   .btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 20);
+    color: whitesmoke;
+   }
+
+   .btn-light {
+     @extend .btn;
+    background: lighten($primary-color, 70);
+    color: #333;
+
    }
 
    #main-footer {

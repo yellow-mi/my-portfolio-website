@@ -1,3 +1,7 @@
+@import 'https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Monoton&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&display=swap';
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -40,14 +44,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #2b2e60;
+    background: #292f34;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #30336B;
+    background: #30373d;
     transform: translate3d(0, 100%, 0);
     transition: all 0.6s ease-out; }
     .menu-branding.show {
@@ -59,7 +63,7 @@
       background-size: cover;
       opacity: 1.0;
       border-radius: 50%;
-      border: solid 4px #F8D210;
+      border: solid 4px #4da9af;
       z-index: 5; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
@@ -67,19 +71,20 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #F8D210; }
+      color: #4da9af; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
     font-size: 30px;
     text-transform: uppercase;
+    font-family: "Overpass Mono", "Cursive", "Calibri";
     padding: 1rem 0;
     font-weight: 300;
     color: whitesmoke;
     text-decoration: none;
     transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
-      color: #F8D210; }
+      color: #4da9af; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.18s; }
@@ -97,11 +102,11 @@
   box-sizing: border-box; }
 
 body {
-  background: #30336B;
+  background: #30373d;
   color: whitesmoke;
   height: 100%;
   margin: 0;
-  font-family: 'blippo','monospace', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Overpass Mono", "Cursive", "Calibri";
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/homepage_background.jpg);
@@ -114,7 +119,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(48, 51, 107, 0.85);
+      background: rgba(48, 55, 61, 0.85);
       z-index: -1; }
 
 h1,
@@ -125,13 +130,14 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem; }
+    font-size: 3.8rem;
+    font-family: "Monoton", "Cursive", "Calibri"; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(51, 54, 114, 0.5); }
+    background: rgba(52, 60, 67, 0.5); }
 
 a {
   color: whitesmoke;
@@ -143,7 +149,8 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #F8D210; }
+  color: #4da9af;
+  text-transform: capitalize; }
 
 main {
   padding: 4rem;
@@ -153,7 +160,7 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #F8D210;
+        color: #4da9af;
         transition: all 0.6s ease-out; }
   main#home {
     overflow: hidden; }
@@ -169,7 +176,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #F8D210 4px solid; }
+    border: #4da9af 4px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -180,16 +187,55 @@ main {
   .about-info .job3 {
     grid-area: job3; }
   .about-info .job {
-    background: #383b7d;
+    background: #3b444b;
     padding: 0.5rem;
-    border-bottom: #F8D210 5px solid; }
+    border-bottom: #4da9af 5px solid; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.7rem; }
+  .projects img {
+    width: 100%;
+    border: 3px #4da9af solid;
+    border-radius: 18px; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: white;
+      transition: all 0.6s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 3px;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #4da9af;
+    color: #30373d; }
+
+.btn-dark {
+  background: #030404;
+  color: whitesmoke; }
+
+.btn-light {
+  background: #e6e9ec;
+  color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1.6rem 1rem;
-  background: #202248;
+  background: #1a1d20;
   color: whitesmoke;
   height: 100px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -220,8 +266,12 @@ main {
       height: 150px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

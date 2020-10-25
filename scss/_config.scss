@@ -1,5 +1,21 @@
-$primary-color:#30336B;
-$secondary-color:#F8D210;
+$primary-color: #30373d;
+$secondary-color: #4da9af;
+// Title | Google Font 1
+@import 'https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap';
+$font-title1: 'Fredoka One', 'Calibri';
+
+// Title | Google Font 2
+@import 'https://fonts.googleapis.com/css2?family=Monoton&display=swap';
+$font-title2: 'Monoton', 'Cursive', 'Calibri';
+
+// Title | Google Font 3
+@import 'https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600;700&display=swap';
+$font-title3: 'Overpass Mono', 'Cursive', 'Calibri';
+
+// Text Foont | Google Font
+@import 'https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&display=swap';
+$text-font: 'Overpass Mono', 'Cursive', 'Calibri';
+
 //$secondary-color: #41dde2;
 $show-home-image: true;
 $home-image: url(../img/homepage_background.jpg);
