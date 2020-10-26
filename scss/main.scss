@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'itemgrid';
 
 * {
     box-sizing: border-box; 
@@ -8,7 +9,7 @@
   body {
     @include background;
     background: $primary-color;
-    color: whitesmoke; 
+    color: $quaternary-color;; 
     height: 100%;
     margin: 0;
     font-family: $text-font;
@@ -32,9 +33,144 @@
        margin-bottom: 2rem;
        padding: 0.2rem 1rem;
        background: rgba(lighten($primary-color, 2), 0.5);
+       color: $tertiary-color;
      }
    }
-   
+
+   .animate:before {
+     content: '';
+     animation: animate infinite 8s;
+   }
+  // @keyframes animate {
+  //  20%{
+  //    content: 'Web Developer';
+  //  }
+  //  50%{
+  //    content: 'Web Developer, Programmer';
+   // }
+  //  72%{
+   //   content: 'Web Developer, Programmer & Entrepreneur';
+  //  }
+  // }
+
+  @keyframes animate {
+      3%{
+        content: 'W';
+    }
+      5%{
+        content: 'We';
+    } 
+      7%{
+        content: 'Web';
+    } 
+      9%{
+        content: 'Web D';
+    } 
+      11%{
+        content: 'Web De';
+    } 
+      13%{
+        content: 'Web Dev';
+    } 
+      15%{
+        content: 'Web Deve';
+    } 
+      17%{
+        content: 'Web Devel';
+    } 
+      19%{
+        content: 'Web Develo';
+    } 
+      21%{
+        content: 'Web Develop';
+    } 
+      23%{
+        content: 'Web Develope';
+    } 
+      25%{
+        content: 'Web Developer,';
+    } 
+      27%{
+        content: 'Web Developer, P';
+    } 
+      29%{
+        content: 'Web Developer, Pr';
+    } 
+      31%{
+        content: 'Web Developer, Pro';
+    } 
+      33%{
+        content: 'Web Developer, Prog';
+    } 
+      37%{
+        content: 'Web Developer, Progra';
+    } 
+      39%{
+        content: 'Web Developer, Program';
+    } 
+      41%{
+        content: 'Web Developer, Programm';
+    } 
+      43%{
+        content: 'Web Developer, Programme';
+    } 
+      45%{
+        content: 'Web Developer, Programmer';
+    } 
+      47%{
+        content: 'Web Developer, Programmer &';
+    } 
+      49%{
+        content: 'Web Developer, Programmer & E';
+    } 
+      51%{
+        content: 'Web Developer, Programmer & En';
+    } 
+      53%{
+        content: 'Web Developer, Programmer & Ent';
+    } 
+      55%{
+        content: 'Web Developer, Programmer & Ent';
+    } 
+      57%{
+        content: 'Web Developer, Programmer & Ent';
+    } 
+      59%{
+        content: 'Web Developer, Programmer & Entr';
+    } 
+      61%{
+        content: 'Web Developer, Programmer & Entre';
+    } 
+      63%{
+        content: 'Web Developer, Programmer & Entrep';
+    } 
+      65%{
+        content: 'Web Developer, Programmer & Entrepr';
+    } 
+      63%{
+        content: 'Web Developer, Programmer & Entrepre';
+    } 
+      65%{
+        content: 'Web Developer, Programmer & Entrepren';
+    } 
+      67%{
+        content: 'Web Developer, Programmer & Entreprene';
+    } 
+      69%{
+        content: 'Web Developer, Programmer & Entrepreneu';
+    } 
+      71%{
+        content: 'Web Developer, Programmer & Entrepreneur';
+    } 
+      80%{
+        content: 'Web Developer, Programmer & Entrepreneur';
+    } 
+      90%{
+        content: 'Web Developer, Programmer & Entrepreneur';
+    } 
+    
+    }
+
    a {
      color: whitesmoke;
      text-decoration: none;
@@ -48,6 +184,7 @@
 
    .text-secondary {
     color: $secondary-color;
+ 
   }
 
    main {
@@ -115,32 +252,16 @@
     }
    }
 
-   // Work/Projects
-   .projects {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-gap: 0.7rem;
-     
-     img {
-       width: 100%;
-       border: 3px $secondary-color solid;
-       border-radius: 18px;
-
-       &:hover {
-         opacity: 0.5;
-         border-color: white;
-         @include easeOut;
-       }
-     }
-   }
+   
 
    // Contact Page
+   
    .boxes {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-evenly;
      align-items: center;
-     margin-top: 1rem;
+     margin-top: 2rem;
      
      div {
        font-size: 1rem;
@@ -161,6 +282,62 @@
      }
    }
 
+   // Separation line
+
+   hr {
+     border: none;
+     margin-bottom: 50px;
+     margin-top: 20px;
+     border-style: dotted;
+     background: #ff0087;
+     color: $primary-color;
+   }
+
+   #contact {
+     &-a {
+       .text-fields {
+         display: grid;
+         grid-template-areas: 
+         'name email'
+         'subject phone'
+         'message message'
+         ;
+         grid-gap: 1.2rem;
+         margin-bottom: 1.2rem;
+
+         .name-input {
+           grid-area: name;
+         }
+         .subject-input {
+           grid-area: subject;
+         }
+         .email-input {
+           grid-area: email;
+         }
+         .phone-input {
+           grid-area: phone;
+         }
+         .message-input {
+           grid-area: message;
+           height: 130px;
+         }
+
+         .text-input {
+           padding: 0.5rem 1rem;
+         }
+
+       }
+
+       button[type='submit'] {
+         width: 30%;
+         margin: auto;
+       }
+       .section-title {
+         color: $tertiary-color;
+       }
+     }
+   }
+
    // Button Styles
    .btn {
      display: block;
@@ -168,25 +345,42 @@
      border: 0;
      border-radius: 3px;
      margin-bottom: 0.3rem;
+     text-align: center;
      &:hover {
-       background: $secondary-color;
-       color: $primary-color;
+       background: $tertiary-color;
+       @include easeOut;
      }
    }
 
    .btn-dark {
     @extend .btn;
-    background: darken($primary-color, 20);
-    color: whitesmoke;
+    background: darken($secondary-color, 17);
+    color: $tertiary-color;
+    &:hover {
+      color: darken($secondary-color, 20);
+    }
    }
 
    .btn-light {
      @extend .btn;
-    background: lighten($primary-color, 70);
+    background: lighten($secondary-color, 50);
     color: #333;
+  }
 
-   }
+  .btn-form {
+    @extend .btn;
+    background: darken($secondary-color, 17);
+    color: $quaternary-color;
+    font-size: 1rem;
 
+    &:hover {
+      color: #333;
+      text-size-adjust: 3rem;
+      background: #ff0087;
+    }
+  }
+
+  
    #main-footer {
 
      text-align: center;

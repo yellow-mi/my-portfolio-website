@@ -24,22 +24,22 @@
             <ul class="menu-nav">
                 <li class="nav-item show">
                     <a href="index.html" class="nav-link">
-                        Home
+                        <i class="fas fa-home"></i>
                     </a>
                 </li>
                 <li class="nav-item show">
                     <a href="about.html" class="nav-link">
-                        About
+                          About <i class="fas fa-fingerprint"></i>
                     </a>
                 </li>
                 <li class="nav-item show">
                     <a href="work.html" class="nav-link">
-                        My projects
+                        My projects <i class="fas fa-code"></i>
                     </a>
                 </li>
                 <li class="nav-item show current">
                     <a href="contact.html" class="nav-link">
-                        How to reach me
+                        How to reach me <i class="fas fa-rocket"></i>
                     </a>
                 </li>
             </ul>
@@ -62,8 +62,40 @@
            </div>
            
         </div>
-    </main>
+        
+       <!-- <div class="separation-line"></div> -->
+       <hr class="separation-line" width="30%" size="4" color="#ff0087">
     
+    <section id="contact-a" class="text-center py-3">
+        <div class="container">
+            <h2 class="section-title">
+                You can also use the form below:
+            </h2>
+            <div class="bottom-line"></div>
+            <p class="lead">Leave a message!</p>
+            <form method="POST" data-netifly="true" data-netlify-recaptcha="true">
+                <div class="text-fields">
+                    <input type="text" class="text-input name-input" placeholder="Name"
+                    name="name">
+                    <input type="text" class="text-input subject-input" placeholder="Subject"
+                    name="subject">
+
+                    <input type="email" class="text-input email-input" placeholder="Email Address"
+                    name="email">
+                    <input type="text" class="text-input phone-input" placeholder="Phone Number"
+                    name="phone">
+                    <textarea class="text-input message-input" placeholder="Enter Message"
+                    name="message"></textarea>
+                    <div class="my-2">
+                        <div data-netlify-recaptcha="true"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-form">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>
+
     <footer id="main-footer">
         Miriam Lentini <br> Copyright &copy;2020
     </footer>

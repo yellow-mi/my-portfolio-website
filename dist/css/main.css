@@ -63,7 +63,7 @@
       background-size: cover;
       opacity: 1.0;
       border-radius: 50%;
-      border: solid 4px #4da9af;
+      border: solid 4px #00ffff;
       z-index: 5; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
@@ -71,7 +71,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #4da9af; }
+      color: #00ffff; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -84,7 +84,7 @@
     text-decoration: none;
     transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
-      color: #4da9af; }
+      color: #ffff00; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.18s; }
@@ -98,12 +98,25 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.72s; }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.7rem; }
+  .projects img {
+    width: 100%;
+    border: 3px #00ffff solid;
+    border-radius: 18px; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: white;
+      transition: all 0.6s ease-out; }
+
 * {
   box-sizing: border-box; }
 
 body {
   background: #30373d;
-  color: whitesmoke;
+  color: #f8f8ff;
   height: 100%;
   margin: 0;
   font-family: "Overpass Mono", "Cursive", "Calibri";
@@ -137,7 +150,90 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(52, 60, 67, 0.5); }
+    background: rgba(52, 60, 67, 0.5);
+    color: #ffff00; }
+
+.animate:before {
+  content: '';
+  animation: animate infinite 8s; }
+
+@keyframes animate {
+  3% {
+    content: 'W'; }
+  5% {
+    content: 'We'; }
+  7% {
+    content: 'Web'; }
+  9% {
+    content: 'Web D'; }
+  11% {
+    content: 'Web De'; }
+  13% {
+    content: 'Web Dev'; }
+  15% {
+    content: 'Web Deve'; }
+  17% {
+    content: 'Web Devel'; }
+  19% {
+    content: 'Web Develo'; }
+  21% {
+    content: 'Web Develop'; }
+  23% {
+    content: 'Web Develope'; }
+  25% {
+    content: 'Web Developer,'; }
+  27% {
+    content: 'Web Developer, P'; }
+  29% {
+    content: 'Web Developer, Pr'; }
+  31% {
+    content: 'Web Developer, Pro'; }
+  33% {
+    content: 'Web Developer, Prog'; }
+  37% {
+    content: 'Web Developer, Progra'; }
+  39% {
+    content: 'Web Developer, Program'; }
+  41% {
+    content: 'Web Developer, Programm'; }
+  43% {
+    content: 'Web Developer, Programme'; }
+  45% {
+    content: 'Web Developer, Programmer'; }
+  47% {
+    content: 'Web Developer, Programmer &'; }
+  49% {
+    content: 'Web Developer, Programmer & E'; }
+  51% {
+    content: 'Web Developer, Programmer & En'; }
+  53% {
+    content: 'Web Developer, Programmer & Ent'; }
+  55% {
+    content: 'Web Developer, Programmer & Ent'; }
+  57% {
+    content: 'Web Developer, Programmer & Ent'; }
+  59% {
+    content: 'Web Developer, Programmer & Entr'; }
+  61% {
+    content: 'Web Developer, Programmer & Entre'; }
+  63% {
+    content: 'Web Developer, Programmer & Entrep'; }
+  65% {
+    content: 'Web Developer, Programmer & Entrepr'; }
+  63% {
+    content: 'Web Developer, Programmer & Entrepre'; }
+  65% {
+    content: 'Web Developer, Programmer & Entrepren'; }
+  67% {
+    content: 'Web Developer, Programmer & Entreprene'; }
+  69% {
+    content: 'Web Developer, Programmer & Entrepreneu'; }
+  71% {
+    content: 'Web Developer, Programmer & Entrepreneur'; }
+  80% {
+    content: 'Web Developer, Programmer & Entrepreneur'; }
+  90% {
+    content: 'Web Developer, Programmer & Entrepreneur'; } }
 
 a {
   color: whitesmoke;
@@ -149,7 +245,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #4da9af; }
+  color: #00ffff; }
 
 main {
   padding: 4rem;
@@ -159,7 +255,7 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #4da9af;
+        color: #00ffff;
         transition: all 0.6s ease-out; }
   main#home {
     overflow: hidden; }
@@ -175,7 +271,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #4da9af 4px solid; }
+    border: #00ffff 4px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -188,57 +284,90 @@ main {
   .about-info .job {
     background: #3b444b;
     padding: 0.5rem;
-    border-bottom: #4da9af 5px solid; }
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.7rem; }
-  .projects img {
-    width: 100%;
-    border: 3px #4da9af solid;
-    border-radius: 18px; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: white;
-      transition: all 0.6s ease-out; }
+    border-bottom: #00ffff 5px solid; }
 
 .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 2rem; }
   .boxes div {
     font-size: 1rem;
-    border: 3px #4da9af solid;
+    border: 3px #00ffff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.6s ease-out; }
     .boxes div:hover {
       padding: 1.5rem 2.5rem;
-      background: #4da9af;
+      background: #00ffff;
       color: #30373d; }
       .boxes div:hover span {
         color: #30373d; }
 
-.btn, .btn-dark, .btn-light {
+hr {
+  border: none;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  border-style: dotted;
+  background: #ff0087;
+  color: #30373d; }
+
+#contact-a .text-fields {
+  display: grid;
+  grid-template-areas: 'name email' 'subject phone' 'message message';
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem; }
+  #contact-a .text-fields .name-input {
+    grid-area: name; }
+  #contact-a .text-fields .subject-input {
+    grid-area: subject; }
+  #contact-a .text-fields .email-input {
+    grid-area: email; }
+  #contact-a .text-fields .phone-input {
+    grid-area: phone; }
+  #contact-a .text-fields .message-input {
+    grid-area: message;
+    height: 130px; }
+  #contact-a .text-fields .text-input {
+    padding: 0.5rem 1rem; }
+
+#contact-a button[type='submit'] {
+  width: 30%;
+  margin: auto; }
+
+#contact-a .section-title {
+  color: #ffff00; }
+
+.btn, .btn-dark, .btn-light, .btn-form {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   border-radius: 3px;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #4da9af;
-    color: #30373d; }
+  margin-bottom: 0.3rem;
+  text-align: center; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover, .btn-form:hover {
+    background: #ffff00;
+    transition: all 0.6s ease-out; }
 
 .btn-dark {
-  background: #030404;
-  color: whitesmoke; }
+  background: #00a8a8;
+  color: #ffff00; }
+  .btn-dark:hover {
+    color: #009999; }
 
 .btn-light {
-  background: #e6e9ec;
+  background: white;
   color: #333; }
+
+.btn-form {
+  background: #00a8a8;
+  color: #f8f8ff;
+  font-size: 1rem; }
+  .btn-form:hover {
+    color: #333;
+    text-size-adjust: 3rem;
+    background: #ff0087; }
 
 #main-footer {
   text-align: center;

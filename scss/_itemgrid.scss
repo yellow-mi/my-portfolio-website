@@ -1,0 +1,18 @@
+// Work/Projects
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.7rem;
+    
+    img {
+      width: 100%;
+      border: 3px $secondary-color solid;
+      border-radius: 18px;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: white;
+        @include easeOut;
+      }
+    }
+  }
