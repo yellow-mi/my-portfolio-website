@@ -421,4 +421,7 @@ hr {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
+    grid-template-columns: 1fr; }
+  #contact-a .text-fields {
+    grid-template-areas: 'name' 'email' 'subject' 'phone' 'message';
     grid-template-columns: 1fr; } }
