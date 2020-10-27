@@ -218,7 +218,7 @@
      grid-gap: 30px;
      grid-template-areas: 
      'bioimage bio bio'
-     'job1 job2 job3';
+     ;
      grid-template-columns: repeat(3, 1fr);
 
      .bio-image {
@@ -230,30 +230,54 @@
  
     .bio {
       grid-area: bio;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
+  }
  
-    .job1 {
-      grid-area: job1;
+    .bottom-line{
+        float: right;
     }
- 
-    .job2 {
-      grid-area: job2;
+    
+    
+    .container {
+        h2{
+            text-align: center;
+            line-height: 0.4;
+            
+        }
     }
- 
-    .job3 {
-      grid-area: job3;
-    }
- 
-    .job {
-      background: lighten($primary-color,5);
-      padding: 0.5rem;
-      border-bottom: $secondary-color 5px solid;
-    }
-   }
+    
+    .progress {
+        overflow: hidden;
+        height: 20px;
+        background: whitesmoke;
+        border-radius: 5px;
+        //margin-bottom: 0.6rem;
+        display: block;
+        margin: 2px 20px;
+        box-sizing: border-box;
 
-   
+        div {
+            display: block;
+          height: 100%;
+          color: #fff;
+          text-align: center;
+          background: darken($secondary-color, 20);
+          
+        }
+}
 
+h4 {
+    
+    text-align: left;
+    margin-left: 40px;
+    line-height: 0.5;
+    margin-bottom: 10px;
+
+    &:nth-last-child() {
+        margin-bottom: 20px;
+    }
+}
    // Contact Page
    
    .boxes {
@@ -324,6 +348,16 @@
 
          .text-input {
            padding: 0.5rem 1rem;
+         }
+
+         input {
+            border-radius: 3px;
+            border-color: $secondary-color;
+         }
+
+         textarea {
+            border-radius: 3px;
+            border-color: $secondary-color;
          }
 
        }

@@ -265,7 +265,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -274,17 +274,37 @@ main {
     border: #00ffff 4px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job1 {
-    grid-area: job1; }
-  .about-info .job2 {
-    grid-area: job2; }
-  .about-info .job3 {
-    grid-area: job3; }
-  .about-info .job {
-    background: #3b444b;
-    padding: 0.5rem;
-    border-bottom: #00ffff 5px solid; }
+    font-size: 1.3rem; }
+
+.bottom-line {
+  float: right; }
+
+.container h2 {
+  text-align: center;
+  line-height: 0.4; }
+
+.progress {
+  overflow: hidden;
+  height: 20px;
+  background: whitesmoke;
+  border-radius: 5px;
+  display: block;
+  margin: 2px 20px;
+  box-sizing: border-box; }
+  .progress div {
+    display: block;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background: #009999; }
+
+h4 {
+  text-align: left;
+  margin-left: 40px;
+  line-height: 0.5;
+  margin-bottom: 10px; }
+  h4:nth-last-child {
+    margin-bottom: 20px; }
 
 .boxes {
   display: flex;
@@ -331,6 +351,12 @@ hr {
     height: 130px; }
   #contact-a .text-fields .text-input {
     padding: 0.5rem 1rem; }
+  #contact-a .text-fields input {
+    border-radius: 3px;
+    border-color: #00ffff; }
+  #contact-a .text-fields textarea {
+    border-radius: 3px;
+    border-color: #00ffff; }
 
 #contact-a button[type='submit'] {
   width: 30%;
@@ -412,10 +438,12 @@ hr {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #contact-a .section-title {
+    line-height: 1.7rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -424,4 +452,6 @@ hr {
     grid-template-columns: 1fr; }
   #contact-a .text-fields {
     grid-template-areas: 'name' 'email' 'subject' 'phone' 'message';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  #contact-a .section-title {
+    line-height: 1.8rem; } }
